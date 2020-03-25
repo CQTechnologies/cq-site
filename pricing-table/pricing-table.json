@@ -1,0 +1,12 @@
+tableJsonData = {
+	"headings": [".", "heading1","heading2","3","4","so on"],
+    "body": [
+    {"itemName":"ITEM-1", "data":["col 1 value", "col 2 value", "3", "4", "so on"]},
+    {"itemName":"ITEM-2", "data":["col 1 value", "col 2 value", "3", "4", "so on"]},
+    {"itemName":"ITEM-3", "data":["col 1 value", "col 2 value", "3", "4", "so on"]},
+    {"itemName":"ITEM-4", "data":["col 1 value", "col 2 value", "3", "4", "so on"]},
+    {"itemName":"ITEM-5", "data":["col 1 value", "col 2 value", "3", "4", "so on"]},
+    {"itemName":"ITEM-6", "data":["col 1 value", "col 2 value", "3", "4", "so on"]},
+    {"itemName":"ITEM-7", "data":["col 1 value", "col 2 value", "3", "4", "so on"]},
+    ]
+};

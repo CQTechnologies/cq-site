@@ -1,0 +1,9 @@
+faqJsonData = [
+    {"category":"math", "title": "Our Mission", "description":"<p>Our professionals are always ready to create user friendly best services for you. We do not compromise over quality. Our motto is: Work smart than hard! Customized services are also a part of our company. If you have any idea then you are just a call away from us. We are available 24/7 to provide you professional services.</p>", "showInShortFaqs":true},
+    {"category":"math", "title": "Company Philosophy", "description":"<p>CQ technologies is not for locals only. Our services are not limited to one country but international market.</p><p>Usually <strong>low rates are connected to low quality</strong>; it’s a fact in most cases, but not always.</p><p>As our developers are outsourced from Asian countries where tax rates and cost of living is not so high as compared to US or UK for example, we are able to get good skills at low cost. So we charge lesser to our clients likewise.</p><p>To maintain quality and communication, as addressed above, we always have the most skilled project managers in the middle to ensure that. The client is always hassle-free.</p>", "showInShortFaqs":true},
+    {"category":"math", "title": "", "description":"", "showInShortFaqs":false},
+    {"category":"science", "title": "", "description":"", "showInShortFaqs":false},
+    {"category":"science", "title": "", "description":"", "showInShortFaqs":false},
+    {"category":"other", "title": "", "description":"", "showInShortFaqs":false},
+    {"category":"other", "title": "", "description":"", "showInShortFaqs":false}
+];
