@@ -16,7 +16,21 @@
 	<title>CQ Technologies - IT Solutions</title>
 
     <!-- Styles -->
-           
+        <style>
+			.skill-wrapper {
+				margin-top: 30px;
+				border-radius: 8px;
+				padding: 10px;
+			}
+			.skill-wrapper .skill-row {
+				margin-bottom: 16px;
+			}
+			.skill-wrapper .skill-row .skill-icon img {
+				width: 90px;
+				height: auto;
+				padding: 10px;
+			}
+		</style>
 		<!-- Bootstrap core CSS -->
   		<link rel="stylesheet" href="css/bootstrap.css">        
 
@@ -172,24 +186,28 @@
 
 		</div>
 		<!-- /Header Container -->
-        
+		
+		<!-- Banner -->
+		<div class="banner-wrapper">
+			<img src="./img/banner/banner-top-01.svg" />
+		</div>
 
 		<!-- Slider Container -->
-		<div class="slider-wrapper">
+		<!-- <div class="slider-wrapper"> -->
 
 
 	<!-- START REVOLUTION SLIDER 3.1 rev5 fullwidth mode -->
 
-	<div class="tp-banner-container">
+	<!-- <div class="tp-banner-container">
 		<div class="tp-banner" >
-			<ul>	
+			<ul>	 -->
 			
 				<!-- SLIDE  -->
-				<li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000" data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="Amazing Features">
+				<!-- <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000" data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="Amazing Features"> -->
 					<!-- MAIN IMAGE -->
-					<img src="img/demo/parallax/parallax-back8.jpg"  alt="slidebg2" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+					<!-- <img src="img/demo/parallax/parallax-back8.jpg"  alt="slidebg2" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"> -->
 
-					<div class="tp-caption large_bold_white customin customout rs-parallaxlevel-3"
+					<!-- <div class="tp-caption large_bold_white customin customout rs-parallaxlevel-3"
 						data-x="center"
 						data-y="150"
 
@@ -207,9 +225,9 @@
 						data-endeasing="Power3.easeInOut"
 						data-captionhidden="on"
 						style="font-size:90px;line-height:110px;">CQ Technologies
-					</div>
+					</div> -->
                     
-					<div class="tp-caption mediumlarge_light_white script-font customin customout rs-parallaxlevel-4"
+					<!-- <div class="tp-caption mediumlarge_light_white script-font customin customout rs-parallaxlevel-4"
 						data-x="center"
 						data-y="280"
 						
@@ -245,16 +263,16 @@
                         <a href="contact.php" class="btn btn-white btn-lg btn-alt">Contact us to know more! <i class="fa fa-angle-double-down iconright"></i></a>
 					</div>
                     
-				</li>
+				</li> -->
                 <!-- SLIDE  -->
                 
 				
 				<!-- SLIDE  -->
-				<li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000" data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="We Are Avendor">
+				<!-- <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000" data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="We Are Avendor"> -->
 					<!-- MAIN IMAGE -->
-					<img src="img/demo/content/services3.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+					<!-- <img src="img/demo/content/services3.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"> -->
 
-					<div class="tp-caption large_bold_white customin customout tp-resizeme rs-parallaxlevel-3"
+					<!-- <div class="tp-caption large_bold_white customin customout tp-resizeme rs-parallaxlevel-3"
 						data-x="center"
 						data-y="150"
 
@@ -335,12 +353,12 @@
                 
 			</ul>
 		</div>
-	</div>
+	</div> -->
 
 
 			<!-- END REVOLUTION SLIDER -->
     
-		</div>
+		<!-- </div> -->
 		<!-- /Slider Container -->
 
 		<!-- Main Container -->
@@ -387,18 +405,142 @@
 							<div class="white-space space-small"></div>
 						</div>
 					</div>
+
+					<!-- Methodology -->
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="animation fadeInLeft">
+								<h3 class="fancy-title animation fadeInRight"><span>Methodology</span></h3>
+								<img src="./img/banner/methodology-01.svg" />
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<!-- Methodology Details -->
+							<div class="animation fadeInRight">
+								<h3 class="fancy-title animation fadeInRight"><span>Methodology Details</span></h3>
+								<div id="target-methodology-details"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Skills - Our Expertise -->
+					<div class="row skill-wrapper">
+						<div class="col-sm-12">
+							<h3 class="fancy-title">
+								<span>Our Expertise</span>
+							</h3>
+						</div>
+						<div class="col-sm-12">
+							<div class="row skill-row">
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/js.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/es6.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/typescript.svg" /></div>
+								<div class="clearfix visible-xs"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/nodejs.svg" /></div>
+								<div class="clearfix visible-sm"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/react.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/redux.svg" /></div>
+								<div class="clearfix visible-md"></div>
+								<div class="clearfix visible-xs"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/vue.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/webpack.svg" /></div>
+								<div class="clearfix visible-sm"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/jest.svg" /></div>
+								<div class="clearfix visible-xs"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/jquery.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/pwa.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/html5.svg" /></div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="row skill-row">
+								<div class="col-md-offset-3 col-lg-offset-4 col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/css3.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/sass.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/material.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/bootstrap.svg" /></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Skills - Related Expertise -->
+					<div class="row skill-wrapper">
+						<div class="col-sm-12">
+							<h3 class="fancy-title">
+								<span>Related Expertise</span>
+							</h3>
+						</div>
+						<div class="col-sm-12">
+							<div class="row skill-row">
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/postgre.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/MySQL.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/redis.svg" /></div>
+								<div class="clearfix visible-xs"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/cassandra.svg" /></div>
+								<div class="clearfix visible-sm"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/couchdb.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/rabbitmq.svg" /></div>
+								<div class="clearfix visible-md"></div>
+								<div class="clearfix visible-xs"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/elasticsearch.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/amazon.svg" /></div>
+								<div class="clearfix visible-sm"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/linux.svg" /></div>
+								<div class="clearfix visible-xs"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/Ubuntu.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/memcached.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/apache.svg" /></div>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="row skill-row">
+								<div class="col-md-offset-3 col-lg-offset-4 col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/nginx.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/github.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/git-icon.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/graphql.svg" /></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Skills - Coming Soon -->
+					<div class="row skill-wrapper" style="margin-bottom: 30px;">
+						<div class="col-sm-12">
+							<h3 class="fancy-title">
+								<span>Coming Soon</span>
+							</h3>
+						</div>
+						<div class="col-sm-12">
+							<div class="row skill-row">
+								<div class="col-lg-offset-2 col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/javaee.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/hibernate.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/spring.svg" /></div>
+								<div class="clearfix visible-xs"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/glassfish.svg" /></div>
+								<div class="clearfix visible-sm"></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/tomcat.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/websphere.svg" /></div>
+								<div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 skill-icon"><img src="./ico/skill/wildfly.svg" /></div>
+							</div>
+						</div>
+						<!-- <div class="col-sm-12">
+							<div class="row skill-row">
+								<div class="col-xs-1 col-sm-2"></div>
+								<div class="col-xs-4 col-sm-2 skill-icon"><img src="./ico/skill/tomcat.svg" /></div>
+								<div class="col-xs-5 col-sm-2 skill-icon"><img src="./ico/skill/websphere.svg" /></div>
+								<div class="col-xs-5 col-sm-2 skill-icon"><img src="./ico/skill/wildfly.svg" /></div>
+							</div>
+						</div> -->
+					</div>
 					
+					<!-- Self Ratings -->
                 	<div class="row">
                     
-                    	<div class="col-sm-6 columns">
+                    	<!-- <div class="col-sm-6 columns">
                         	<h3 class="fancy-title animation fadeInLeft"><span>Our Specializations</span></h3>
-							<!-- Accordion -->
 							<img style="max-width:100%;" src="technologies2.png" />
-							<!-- /Accordion -->
                             <div class="white-space space-small"></div>
-                        </div>
+                        </div> -->
                         
-                        <div class="col-sm-6 columns">
+                        <div class="col-sm-12 columns">
                         	<h3 class="fancy-title animation fadeInRight"><span>Self Ratings</span></h3>
                         	
                             <h4 class="progress-title color-warning light">Web Develpment<span class="pull-right">95%</span></h4>
@@ -746,6 +888,9 @@
     -->
     <!-- Load Scripts -->
 	<script src="js/themejs/application.js"></script>
+
+	<script type="text/javascript" src="./methodology/methodology.json"></script>
+	<script type="text/javascript" src="./methodology/methodology.js"></script>
 
   </body>
 </html> 
