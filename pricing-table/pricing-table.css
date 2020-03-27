@@ -1,0 +1,119 @@
+#price-table-wrapper table {
+    border-collapse: collapse;
+    margin: 50px 0 0 50px;
+    border-top: solid 1px #000;
+    position: relative;
+}
+#price-table-wrapper table tr:first-child {
+    border: 1px solid #000;
+    border-bottom: none;
+}
+/* Very top border */
+#price-table-wrapper table:before {
+content: '';
+display: block;
+position: absolute;
+top: -20px;
+left: 120px;
+height: 20px;
+width: 240px;
+border-bottom: none;
+}
+
+/* Far right headers top border (it's outside the table) */
+#price-table-wrapper table:after { 
+content: '';
+display: block;
+position: absolute;
+border-top: solid 1px #000;
+width: 101px;
+right: -101px;
+top: 0;
+}
+
+/* 
+- Apply header background/font colour 
+- Set base z-index for IE 9 - 10
+*/
+#price-table-wrapper thead, th:before {
+background: #03a9f4;
+color: #FFF;
+z-index: 1;
+}
+
+/* min-width and max-width together act like a width */
+#price-table-wrapper th {
+    min-width: 60px;
+    max-width: 60px;
+    position: relative;
+    height: 100px;
+}
+
+/* Pseudo element borders */
+#price-table-wrapper th:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    height: 100px;
+    width: 60px;
+    border: solid 1px #000;
+    border-right: none;
+    border-top: none;
+    transform: skew(-45deg);
+    border-bottom: none;
+}
+
+/* Apply the right border only to the last pseudo element */
+#price-table-wrapper thead th:last-child:before {
+    border-right: solid 1px #000;
+}
+
+/* Apply the top border only to the first rows cells */
+#price-table-wrapper tbody tr:first-child td {
+    border-top: solid 1px #000;
+}
+
+/* 
+- Rotate and position headings
+- Padding centers the text vertically and does the job of height
+- z-index ensures that the text appears over the background color in IE 9 - 10
+*/
+#price-table-wrapper th span {
+transform: rotate(-45deg);
+display: inline-block;
+vertical-align: middle;
+position: absolute;
+right: -70px;
+bottom: 29px;
+height: 0;
+padding: 0.75em 0 1.85em;
+width: 100px;
+z-index: 2;
+}
+
+
+/* Create first two th styles */
+#price-table-wrapper th:nth-child(1)  {
+border-top: none;
+border-bottom: none;
+}
+#price-table-wrapper th:nth-child(2) {
+    border-right: none;
+}
+#price-table-wrapper th:nth-child(1):before {
+    display: none;	
+}
+
+#price-table-wrapper td {
+    border: solid 1px #000;
+    border-top: none;
+    height: 20px;
+    text-align: center;
+    padding: 5px;
+}
+
+#price-table-wrapper tfoot { 
+    border: solid 1px #000;
+}
