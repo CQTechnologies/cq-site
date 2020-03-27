@@ -1,9 +1,9 @@
 methodologyJsonData = [
-    {"iconFile":"agile.svg", "textHtml":"<b>Agile +</b> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "},
-    {"iconFile":"ci1.svg", "textHtml":"CI, CD Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "},
-    {"iconFile":"tdd3.svg", "textHtml":"TDD Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "},
-    {"iconFile":"wbs.svg", "textHtml":"WBS Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "},
-    {"iconFile":"road-map-01.svg", "textHtml":"Road Maps Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "},
-    {"iconFile":"scrum-01.svg", "textHtml":"Scrum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "},
-    {"iconFile":"sprint2.svg", "textHtml":"Flexible Sprints Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum "},
+    {"iconFile":"agile.svg", "textHtml":"<b>Agile +</b> Agile based development + more custom methodologies"},
+    {"iconFile":"ci1.svg", "textHtml":"<b>CI, CD</b> - Continuous integration and continuous development "},
+    {"iconFile":"tdd3.svg", "textHtml":"<b>TDD</b> - Test driven development "},
+    {"iconFile":"wbs.svg", "textHtml":"<b>WBS</b> - Work breakdown structure"},
+    {"iconFile":"road-map-01.svg", "textHtml":"<b>Roadmaps</b> - Roadmap and timelines of delivery"},
+    {"iconFile":"scrum-01.svg", "textHtml":"<b>Scrum</b> - Stakeholder synchronization "},
+    {"iconFile":"sprint2.svg", "textHtml":"<b>Sprints</b> - Determined plan of delivery "},
 ];
