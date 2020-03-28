@@ -3,51 +3,52 @@ const groupByJsonData = (array, key) => {
     // Return the end result
     return array.reduce((result, currentValue) => {
         // If an array already present for key, push it to the array. Else create an array and push the object
-        (result[currentValue[key]] = result[currentValue[key]] || []).push(
-        currentValue
-        );
+        (result[currentValue[key]] = result[currentValue[key]] || []).push(currentValue);
         // Return the current iteration `result` value, this will be taken as next iteration `result` value and accumulate
         return result;
     }, {}); // empty object is the initial value for result object
 };
 
-const getShortFaqPanel = (el, key, idx) => {
+const getShortFaqPanel = (el, idx, accordianId) => {
+    const iKey = el.title.replace(/\s+/g, '-').toLowerCase();
     return (el.showInShortFaqs === true ? `<div class="panel-heading">
     <h5 class="panel-title" style="position:relative">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-${key}-${idx}">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-${accordianId}-${idx}">
             <span class="icon iconleft">Q:</span>${el.title}
         </a>
-        <a href="http://cqtechnologies.com/faq/index.html#${el.title.replace(/\s+/g, '-').toLowerCase()}" target="_blank" style="position:absolute;right:0;top:0;">
+        <a href="http://cqtechnologies.com/faq/index.html#${iKey}" target="_blank" style="position:absolute;right:0;top:0;">
             Link
         </a>
     </h5>
     </div>
-    <div id="collapse-${key}-${idx}" class="panel-collapse collapse ${!idx && 'in'}">
+    <div id="collapse-${accordianId}-${idx}" class="panel-collapse collapse ${!idx && 'in'}">
         <div class="panel-body">${el.description}</div>
     </div>`: '')
 };
 
-const getFullFaqPanel = (el, key, idx) => {
-    return ( `<div id=${el.title.replace(/\s+/g, '-').toLowerCase()} class="panel-heading">
+const getFullFaqPanel = (el, idx, accordianId) => {
+    const iKey = el.title.replace(/\s+/g, '-').toLowerCase();
+    const expanded = (`#${iKey}` === location.hash ? 'in': '');
+    return ( `<div id=${iKey} class="panel-heading">
     <h5 class="panel-title" style="position:relative">
-        <a class="accordion-toggle" data-toggle="collapse" href="#collapse-${key}-${idx}">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-${accordianId}-${idx}">
             <span class="icon iconleft">Q:</span>${el.title}
         </a>
-        <a href="http://cqtechnologies.com/faq/index.html#${el.title.replace(/\s+/g, '-').toLowerCase()}" target="_blank" style="position:absolute;right:0;top:0;">
+        <a href="http://cqtechnologies.com/faq/index.html#${iKey}" target="_blank" style="position:absolute;right:0;top:0;">
             Link
         </a>
     </h5>
     </div>
-    <div id="collapse-${key}-${idx}" class="panel-collapse collapse in">
+    <div id="collapse-${accordianId}-${idx}" class="panel-collapse collapse ${expanded}">
         <div class="panel-body">${el.description}</div>
     </div>`)
 };
 
-// file:///E:/CQ-Technologies-Projects/CQWebsite/cq-site/faq/index.html
 const setFaq = (short) => {
     const targetAccordianElem = document.getElementById('accordion');
     let faqGrouped = groupByJsonData(faqJsonData, 'category');
     let finalFaqOutput = '';
+    let accordianId = 0;
     if (targetAccordianElem && faqGrouped) {
         if (short) {
             const [cat1, cat2] = Object.keys(faqGrouped);
@@ -55,37 +56,15 @@ const setFaq = (short) => {
                 [cat1]: faqGrouped[cat1].slice(0, 2) || [],
                 [cat2]: faqGrouped[cat2].slice(0, 2) || []
             }
-            console.log('[N]', faqGrouped);
         }
         for (let key of Object.keys(faqGrouped)) {
-
+            accordianId++;
             finalFaqOutput += `
                 <div class="panel panel-default">
                   <p class="lead">${key}</p>
-                    ${faqGrouped[key].map((el, idx) => short ? getShortFaqPanel(el, key, idx): getFullFaqPanel(el, key, idx)).join('')}
+                    ${faqGrouped[key].map((el, idx) => short ? getShortFaqPanel(el, idx, accordianId): getFullFaqPanel(el, idx, accordianId)).join('')}
                 </div>`;
         }
         targetAccordianElem.innerHTML = finalFaqOutput;
     }
 }
-
-// let finalFaqOutput = '';
-// for (let key of Object.keys(faqGrouped)) {
-//     finalFaqOutput += `
-//         <div class="panel panel-default">
-//           <p class="lead">${key}</p>
-//             ${faqGrouped[key].map((el, idx) =>
-//                 el.showInShortFaqs === true ? `<div id=${el.title.replace(/\s+/g, '-').toLowerCase()} class="panel-heading">
-//                     <h5 class="panel-title">
-//                     <a class="accordion-toggle collapsed-icon" data-toggle="collapse" href="#collapse${idx}">
-//                         <span class="icon gfx-star-4 iconleft"></span>${el.title}</a>
-//                     </h5>
-//                 </div>
-//                 <div id="collapse${idx}" class="panel-collapse collapse in">
-//                     <div class="panel-body">${el.description}</div>
-//                 </div>`
-//             : '').join('')}
-//         </div>`;
-// }
-
-console.log('Output', finalFaqOutput);
