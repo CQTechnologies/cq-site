@@ -150,8 +150,8 @@
 													</ul>
 												</li>
 												<!--<li class=""><a href="http://cqtechnologies.com/blog">Blog</a></li>-->
-												<li class="active"><a href="http://cqtechnologies.com/contact">Contact</a></li>
-												<li><a href="http://cqtechnologies.com/faq">FAQs</a></li>
+												<li><a href="http://cqtechnologies.com/contact">Contact</a></li>
+												<li class="active"><a href="http://cqtechnologies.com/faq">FAQs</a></li>
 											</ul>
 										</div><!-- /.navbar-collapse -->
 									
@@ -176,7 +176,7 @@
        
 
 		<!-- Main Wrapper Header -->
-        <div class="main-wrapper-header fancy-header dark-header parallax parallax-breadcrumbs" data-stellar-background-ratio="0.4">
+        <!-- <div class="main-wrapper-header fancy-header dark-header parallax parallax-breadcrumbs" data-stellar-background-ratio="0.4">
 			
             <div class="bg-overlay bg-overlay-gdark"></div>
 
@@ -198,76 +198,26 @@
                 
 			</div>
  
-        </div>       
+        </div>        -->
 		<!-- /Main Wrapper Header -->
 
 		<!-- Main Container -->
 		<div class="main-wrapper">
 
-        	<!-- Container -->
+			<!-- Container -->
+			<div class="white-space space-big"></div>
             <div class="container">
-            	<div class="white-space space-big"></div>
-                
-            	<div class="row">
-                    <div class="col-md-6">
-                    	<h3 class="fancy-title"><span>Contact Information</span></h3>
-                        <p>Please do not hesitate to contact us any time. We are open 24 hours a day, 7 days a week. You can talk to one of our project managers directly as we make sure that one of them is atleast always available for customers. </p>
-						<div class="row">	
-                        	<div class="col-sm-6">
-                            	<ul class="list-default fa-ul">
-					<li><span class="fa-li fa fa-phone color-default"></span>Skype: cqtechnologies.com</li>
-<!-- 					<li><span class="fa-li fa fa-phone color-default"></span>+1 321 222 0866</li> -->
-					<li><span class="fa-li fa fa-envelope color-default"></span>support@cqtechnologies.com</li>
-<!-- 					<li><span class="fa-li fa fa-envelope color-default"></span> Office #11, New Khan building, besides Head Park Hotel, near Al Ghubaiba bus stand, Dubai, UAE.</li> -->
-					<li><span class="fa-li fa fa-envelope color-default"></span>CQ Technologies ltd, Kemp House 152-160 City Road, London, England, EC1V 2NX.</li>
-					<li><span class="fa-li fa fa-clock-o color-default"></span><strong>24/7</strong></li>                            
-				</ul>
+				<div class="row">
+					<div class="col-sm-12 columns">
+						<h3 class="fancy-title animation fadeInLeft"><span>FAQ</span></h3>
+						<!-- Accordion -->
+						<div class="accordion panel-group" id="accordion"></div>
+						<!-- /Accordion -->
+						<div class="white-space space-small"></div>
+					</div>
+				</div>
 			</div>
-			<div class="col-sm-6">
-				    <!-- later >
-					<ul class="list-default fa-ul">
-					  <li><span class="fa-li fa fa-map-marker color-default"></span>141 Fifth Avenue, 44th Floor New York, United States </li>
-					  <li><span class="fa-li fa fa-envelope color-default"></span>office@domain.com</li>                         
-                        		</ul>
-				    -->
-                            </div>
-                        </div>
-                        <div class="white-space space-small"></div>
-                    </div>
-                    <div class="col-md-6">
-                    	<h3 class="fancy-title"><span>Contact Form</span></h3>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSerYL8B41H_zz252Ke1K3TT8ha0cOWxkPdr5q_UxdR0W9TjEw/viewform?embedded=true" width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0" >Loading...</iframe>
-                        <!-- Form -->
-<!--
-						<form class="form-horizontal" id="contactForm" role="form" method="POST" action="contact/process-form.php">
-                        	<div id="status"></div>
-							<div class="form-group">
-								<div class="col-sm-6">
-      								<input type="text" class="form-control input-lg" id="inputName" name="inputName" placeholder="Enter Your Name" />
-																	</div>
-								<div class="col-sm-6">
-      								<input type="Email" class="form-control input-lg" id="inputEmail" name="inputEmail" placeholder="Enter Your Email" />
-																	</div>    
-								<div class="col-sm-12">
-									<input type="subject" class="form-control" id="inputSubject" placeholder="Subject" name="inputSubject">
-                                    								</div> 
-								<div class="col-sm-12">
-      								<textarea class="form-control" rows="6" placeholder="Enter Your Message" id="inputMessage" name="inputMessage" ></textarea>
-																	</div> 
-								<div class="col-sm-12">
-      								<button type="submit" class="btn btn-primary center-block" id="send" name="send">Send Message</button>
-								</div>
-							</div>
-						</form>                        
--->    
-                    <!-- /Form --> 
-                                               
-                        <div class="white-space space-small"></div>
-                    </div>
-				</div>               
-			
-            	<div class="white-space space-medium"></div>	
-            </div>
+			<div class="white-space space-medium"></div>
 			<!-- /Container -->
  
         	
@@ -401,6 +351,11 @@
     -->
     <!-- Load Scripts -->
 	<script src="../js/themejs/application.js"></script>
+
+	<!-- Faq Script -->
+	<script type="text/javascript" src="../about-us/FAQ.json"></script>
+	<script type="text/javascript" src="../about-us/Faq.js"></script>
+	<script>setFaq(false)</script>
 
   </body>
 </html> 
