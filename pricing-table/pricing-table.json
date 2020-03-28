@@ -1,0 +1,24 @@
+tableJsonData = {
+    "colWidth": ["10%", "15%", "15%", "15%", "15%", "15%", "15%"],
+	"headings": [
+        "Values in <b>GBP</b>", 
+        "Basic salary per year (to hire local on-premises developer)",
+        "<b>Salary per month (to hire local on-premises developer)</b>",
+        "+ manager, architect, UX advisor, Sys admin/DevOps cost (1 for 10 devs) @ 75k/yr",
+        "+ Office rent & laptop/furniture, electric bills, other bills, insurance, hiring cost",
+        "+ maternity leaves/pay, eatables, tea, coffee, snacks + misc cost",
+        "Total Monthly cost",
+        "<b>Our Price per year</b>",
+        "<b>Our Price per month</b>",
+        "You saved per year"],
+    "body": [
+    {"itemName":"Fresh - 1 year experienced developer", 
+        "data":["22000", "<span class='text-danger'>1833</span>", "625", "300", "100", "<b>2858</b>", "11319", "<b>943</b>", "<b class='text-success'>10681</b>"]},
+    {"itemName":"3 years experienced", 
+        "data":["35000", "<span class='text-danger'>2917</span>", "625", "300", "100", "<b>3942</b>", "14190", "<b>1183</b>", "<b class='text-success'>20810</b>"]},
+    {"itemName":"7 years experienced", 
+        "data":["65000", "<span class='text-danger'>5417</span>", "625", "300", "100", "<b>6442</b>", "23190", "<b>1933</b>", "<b class='text-success'>41810</b>"]},
+    {"itemName":"10 years experienced", 
+        "data":["90000", "<span class='text-danger'>7500</span>", "625", "300", "100", "<b>8525</b>", "30690", "<b>2558</b>", "<b class='text-success'>59310</b>"]},
+    ]
+};
