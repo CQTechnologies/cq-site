@@ -9,7 +9,9 @@ const tableHeadingHtml = `<thead><tr>${tableJsonData.headings.map((h, idx) => `
 <th scope="col"><span>${h}</span></th>`).join('')}</tr></thead>`;
 const tableBodyHtml = `<tbody>${tableJsonData.body.map(getZuiTableBodyRow).join('')}</tbody>`
 
+const colWidth = `<colgroup>${tableJsonData.colWidth.map((width) => `<col width=${width}/>`).join('')}</colgroup>`;
+console.log(colWidth);
 console.log(tableHeadingHtml)
 console.log(tableBodyHtml)
 
-targetPriceTable.innerHTML  = `${tableHeadingHtml}${tableBodyHtml}`;
+targetPriceTable.innerHTML  = `${colWidth}${tableHeadingHtml}${tableBodyHtml}`;

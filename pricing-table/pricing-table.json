@@ -1,4 +1,5 @@
 tableJsonData = {
+    "colWidth": ["20", "20", "20", "10", "10", "10", "10"],
 	"headings": [".", "heading1","heading2","heading3","heading4","heading5"],
     "body": [
     {"itemName":"ITEM-1", "data":["col 1 value", "col 2 value", "3", "4", "so on"]},
