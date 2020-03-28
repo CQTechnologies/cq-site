@@ -3,11 +3,11 @@ tableJsonData = {
 	"headings": [
         "Values in <b>GBP</b>", 
         "Basic salary per year (to hire local on-premises developer)",
-        "<b>Salary per month (to hire local on-premises developer)</b>",
+        "<b style='color:pink'>Salary per month (to hire local on-premises developer)</b>",
         "+ manager, architect, UX advisor, Sys admin/DevOps cost (1 for 10 devs) @ 75k/yr",
         "+ Office rent & laptop/furniture, electric bills, other bills, insurance, hiring cost",
         "+ maternity leaves/pay, eatables, tea, coffee, snacks + misc cost",
-        "Total Monthly cost",
+        "<span style='color:pink'>Total Monthly cost</span>",
         "<b>Our Price per year</b>",
         "<b>Our Price per month</b>",
         "You saved per year"],
