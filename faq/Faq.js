@@ -12,9 +12,14 @@ const groupByJsonData = (array, key) => {
 };
 
 const getShortFaqPanel = (el, key, idx) => {
-    return (el.showInShortFaqs === true ? `<div id="file:///E:/CQ-Technologies-Projects/CQWebsite/cq-site/faq/index.html#${el.title.replace(/\s+/g, '-').toLowerCase()}" class="panel-heading">
-    <h5 class="panel-title"><a class="accordion-toggle collapsed-icon" data-toggle="collapse" data-parent="#accordion" href="#collapse-${key}-${idx}">
-        <span class="icon gfx-star-4 iconleft"></span>${el.title}</a>
+    return (el.showInShortFaqs === true ? `<div class="panel-heading">
+    <h5 class="panel-title" style="position:relative">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-${key}-${idx}">
+            <span class="icon iconleft">Q:</span>${el.title}
+        </a>
+        <a href="http://cqtechnologies.com/faq/index.html#${el.title.replace(/\s+/g, '-').toLowerCase()}" target="_blank" style="position:absolute;right:0;top:0;">
+            Link
+        </a>
     </h5>
     </div>
     <div id="collapse-${key}-${idx}" class="panel-collapse collapse ${!idx && 'in'}">
@@ -24,11 +29,16 @@ const getShortFaqPanel = (el, key, idx) => {
 
 const getFullFaqPanel = (el, key, idx) => {
     return ( `<div id=${el.title.replace(/\s+/g, '-').toLowerCase()} class="panel-heading">
-    <h5 class="panel-title"><a class="accordion-toggle collapsed-icon" href="#${el.title.replace(/\s+/g, '-').toLowerCase()}">
-        <span class="icon gfx-star-4 iconleft"></span>${el.title}</a>
+    <h5 class="panel-title" style="position:relative">
+        <a class="accordion-toggle" data-toggle="collapse" href="#collapse-${key}-${idx}">
+            <span class="icon iconleft">Q:</span>${el.title}
+        </a>
+        <a href="http://cqtechnologies.com/faq/index.html#${el.title.replace(/\s+/g, '-').toLowerCase()}" target="_blank" style="position:absolute;right:0;top:0;">
+            Link
+        </a>
     </h5>
     </div>
-    <div id="${el.title.replace(/\s+/g, '-').toLowerCase()}" class="panel-collapse collapse in">
+    <div id="collapse-${key}-${idx}" class="panel-collapse collapse in">
         <div class="panel-body">${el.description}</div>
     </div>`)
 };
