@@ -1,12 +1,12 @@
 tableJsonData = {
     "colWidth": ["10%", "15%", "15%", "15%", "15%", "15%", "15%"],
 	"headings": [
-        "Values in <b>GBP</b>", 
-        "Basic salary per year (to hire local on-premises developer)",
-        "<b style='color: #ff9bad;'>Salary per month (to hire local on-premises developer)</b>",
+        "", 
+        "Basic salary per year (to hire on-premises developer)",
+        "<b style='color: #ff9bad;'>Salary per month (to hire on-premises developer)</b>",
         "+ manager, architect, UX advisor, Sys admin/DevOps cost (1 for 10 devs) @ 75k/yr",
-        "+ Office rent & laptop/furniture, electric bills, other bills, insurance, hiring cost",
-        "+ maternity leaves/pay, eatables, tea, coffee, snacks + misc cost",
+        "+ Office rent, laptop, furniture, bills, insurance, hiring cost",
+        "+ maternity leaves/pay, eatables, tea, coffee, misc cost",
         "<span style='color: #ff9bad;'>Total Monthly cost</span>",
         "<b>Our Price per year</b>",
         "<b style='color: #c2601a;'>Our Price per month</b>",
