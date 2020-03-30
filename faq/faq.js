@@ -9,6 +9,14 @@ const groupByJsonData = (array, key) => {
     }, {}); // empty object is the initial value for result object
 };
 
+const copyFaqLinkToClipboard = (el) => {
+    console.log(el);
+    const link = el.href;
+    console.log('[LinkText]', link);
+    navigator.clipboard.writeText(link).then();
+    return false;
+};
+
 const getShortFaqPanel = (el, idx, accordianId) => {
     const iKey = el.title.replace(/\s+/g, '-').toLowerCase();
     return (el.showInShortFaqs === true ? `<div class="panel-heading">
@@ -16,7 +24,7 @@ const getShortFaqPanel = (el, idx, accordianId) => {
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-${accordianId}-${idx}">
             <span class="icon iconleft">Q:</span>${el.title}
         </a>
-        <a href="http://cqtechnologies.com/faq/index.html#${iKey}" target="_blank" style="position:absolute;right:0;top:0;">
+        <a href="http://cqtechnologies.com/faq/#${iKey}" target="_blank" style="position:absolute;right:0;top:0;" onclick="return copyFaqLinkToClipboard(this);">
             Link
         </a>
     </h5>
@@ -34,7 +42,7 @@ const getFullFaqPanel = (el, idx, accordianId) => {
         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-${accordianId}-${idx}">
             <span class="icon iconleft">Q:</span>${el.title}
         </a>
-        <a href="http://cqtechnologies.com/faq/index.html#${iKey}" target="_blank" style="position:absolute;right:0;top:0;">
+        <a href="http://cqtechnologies.com/faq/#${iKey}" target="_blank" style="position:absolute;right:0;top:0;" onclick="return copyFaqLinkToClipboard(this);">
             Link
         </a>
     </h5>
