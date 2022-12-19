@@ -18,7 +18,7 @@ function showSlides(slideNo) {
   const copiedSlideIndex = CURRENT_SLIDE_INDEX + slideNo;
   
   if (copiedSlideIndex > addedSlides.length -1) {CURRENT_SLIDE_INDEX = 0}
-  else if (indcopiedSlideIndexex < 0) {CURRENT_SLIDE_INDEX = addedSlides.length -1}
+  else if (copiedSlideIndex < 0) {CURRENT_SLIDE_INDEX = addedSlides.length -1}
   else CURRENT_SLIDE_INDEX = copiedSlideIndex;
   
   let currentSlide = document.getElementById("current-slide");
