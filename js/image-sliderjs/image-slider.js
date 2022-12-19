@@ -9,7 +9,7 @@ function toggleSlider(displayChange, slides) {
     imageSlider.style = "display:" + displayChange + ";";
     if(displayChange === "block") {
       addedSlides = slides;
-      if(slides && slides.length > 0) document.getElementById("current-slide").src = slides[0];
+      if(slides && slides.length > 0) showSlides(0);
     }
   }
 }
