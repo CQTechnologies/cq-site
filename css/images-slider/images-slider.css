@@ -1,0 +1,109 @@
+.slider-mySlides {
+  height: 100%;
+  width: 100%;
+}
+
+.slider-mySlides-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slider-images-container {
+  display: none;
+  position: fixed;
+  height: 80vh;
+  width: 90vw;
+  margin: 5%;
+  z-index: 1001;
+  border-radius: 5px;
+  background-color: #71717148;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* slider-next & slider-previous buttons */
+.slider-prev,
+.slider-next,
+.slider-close-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.slide-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: rgb(41, 34, 34);
+  margin-top: -30px;
+  text-align: center;
+  font-style: italic;
+}
+.slider-close-button {
+  right: 0;
+  top: 22px;
+  border-radius: 0 0 0 3px;
+}
+
+/* Position the "slider-next button" to the right */
+.slider-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.slider-prev:hover,
+.slider-next:hover,
+.slider-close-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.slider-number-text {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.slider-active-slide,
+.slider-dots:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.slider-animations-fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .slider-prev,
+  .slider-next,
+  .text {
+    font-size: 11px
+  }
+}

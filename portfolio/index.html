@@ -48,6 +48,9 @@
         
 		<!-- Color CSS -->
 		<link href="../css/colors/color-default.css" rel="stylesheet" title="style1">
+
+		<!-- Images Slider CSS -->
+		<link href="../css/images-slider/images-slider.min.css" rel="stylesheet" title="style1">
    
 	    <!-- Google Fonts -->
 	    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,100,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -70,11 +73,33 @@
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 
-</script> 
- 
+</script>
+
 </head>
 
 <body class="bg-pattern1" data-spy="scroll" data-target=".navbar">
+
+
+
+<!-- Slideshow container -->
+<div id="slider-images-container" class="slider-images-container">
+  <div class="slider-close-button" onclick="toggleSlider('none')">&#10005;</div>
+
+	<!-- Full-width images with number and caption text -->
+	<div class="slider-mySlides slider-animations-fade">
+	  <div id="slide-number" class="slider-number-text">- / -</div>
+	  <img id="current-slide" class="slider-mySlides-img " src="https://www.ncenet.com/wp-content/uploads/2020/04/No-image-found.jpg" style="width:100%">
+	  <div id="slide-text" class="slide-text">-</div>
+	</div>
+
+  
+  <!-- slider-next and slider-previous buttons -->
+  <a class="slider-prev" onclick="showSlides(-1)">&#10094;</a>
+  <a class="slider-next" onclick="showSlides(1)">&#10095;</a>
+</div>
+
+
+
 
 <div id="preloader"></div>
     
@@ -238,14 +263,19 @@
 								<div class="element-inner animation fadeInLeft">
 
                                 	<div class="overlay-wrapper">
-										<img src="../img/portfolio/leankit-replica.png" width="1200" height="900" alt="Portfolio 1">                                  
-                                    	<div class="overlay-wrapper-content">
-                                        	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/leankit-replica.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
-                                    		</div>
-                                        	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
-                                    	</div>
-                                    </div>										
+                                    <img src="../img/portfolio/leankit-replica.png" width="1200" height="900" alt="Portfolio 1">                                  
+                                    <div class="overlay-wrapper-content">
+                                        <div class="overlay-details">
+                                          <a class="color-white"
+                                            onclick="toggleSlider('block', [
+                                              '../img/portfolio/leankit-replica.png',
+                                            ])"
+                                            data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                          ></span></a>   	
+                                      </div>
+                                        <div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
+                                    </div>
+                                  </div>										
                             		<div class="portfolio-item-content">
                             			<h3 class="portfolio-item-title"><a href="#">Online notice board & <br />task management application</a></h3>
                                 		<p>Almost learnkit.com replica. 1 year project involving extensive front-end and back-end features.</p>
@@ -264,7 +294,13 @@
 										<img src="../img/portfolio/freelance-site.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/freelance-site.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/freelance-site.png',
+                                              ])"
+                                              data-lightbox="image"
+                                            ><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                          ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -287,7 +323,12 @@
 										<img src="../img/portfolio/acute.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/acute.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white"
+                                              data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/acute.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -311,7 +352,11 @@
 										<img src="../img/portfolio/magento-customizations.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/magento-customizations.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/magento-customizations.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -336,7 +381,11 @@
 										<img src="../img/portfolio/wordpress-buddypress-customizations.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/wordpress-buddypress-customizations.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/wordpress-buddypress-customizations.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -361,7 +410,11 @@
 										<img src="../img/portfolio/mac-console-app-in-objective-c-to-split-and-merge-files-via-RAID5-principles.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/mac-console-app-in-objective-c-to-split-and-merge-files-via-RAID5-principles.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/mac-console-app-in-objective-c-to-split-and-merge-files-via-RAID5-principles.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -391,7 +444,11 @@
 										<img src="../img/portfolio/opencart.jpg" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/opencart.jpg" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/opencart.jpg',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -415,7 +472,11 @@
 										<img src="../img/portfolio/QB-Sugar.jpg" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/QB-Sugar.jpg" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/QB-Sugar.jpg',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -439,7 +500,11 @@
 										<img src="../img/portfolio/spider1.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/spider1.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/spider1.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -447,7 +512,7 @@
                             		<div class="portfolio-item-content">
                             			<h3 class="portfolio-item-title"><a href="#">Web Spider</a></h3>
                                 		<p>Spider that fetched data from different statistics sites and produced custom reports. It logged-in, by-passed JavaScript authentication, handled page redirects, form filling</p>
-										<p><strong>(Selenium, PhantomJS, JavaEE, PostgreSQLs)</strong></p>
+										<p><strong>(Selenium, PhantomJS, JavaEE, Selenium, PostgreSQLs)</strong></p>
                             		</div>	
 
 								</div>
@@ -462,7 +527,11 @@
 										<img src="../img/portfolio/cc.jpg" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/cc.jpg" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/cc.jpg',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -485,7 +554,11 @@
 										<img src="../img/portfolio/spider2.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/spider2.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/spider2.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -510,7 +583,11 @@
 										<img src="../img/portfolio/irc-bot.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/irc-bot.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/irc-bot.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -533,7 +610,11 @@
 										<img src="../img/portfolio/x2engine-flow.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/x2engine-flow.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/x2engine-flow.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -556,7 +637,11 @@
 										<img src="../img/portfolio/x2engine-calendar.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/x2engine-calendar.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/x2engine-calendar.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -581,7 +666,11 @@
 										<img src="../img/portfolio/aws-linux.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/aws-linux.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/aws-linux.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -605,7 +694,12 @@
 										<img src="../img/portfolio/android-app.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/android-app.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/android-app.png',
+                                                '../img/portfolio/Android-prototype-marvelapp.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -613,7 +707,7 @@
                             		<div class="portfolio-item-content">
                             			<h3 class="portfolio-item-title"><a href="#">Mobile app</a></h3>
                                 		<p>A baby product comparison android application.</p>
-										<p><strong> (Android, JavaEE, REST, Hibernate, Amazon EC2)</strong></p>
+										<p><strong> (Android, PostgreSQL, JavaEE, REST, Hibernate, Amazon EC2)</strong></p>
                             		</div>	
 
 								</div>
@@ -629,7 +723,12 @@
 										<img src="../img/portfolio/Android-prototype-marvelapp.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/Android-prototype-marvelapp.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/Android-prototype-marvelapp.png',
+                                                '../img/portfolio/android-app.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -652,7 +751,11 @@
 										<img src="../img/portfolio/IE-FF-Safari-simplgrid.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/IE-FF-Safari-simplgrid.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/IE-FF-Safari-simplgrid.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -676,7 +779,11 @@
 										<img src="../img/portfolio/iOS-SimplGrid.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/iOS-SimplGrid.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/iOS-SimplGrid.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -699,7 +806,11 @@
 										<img src="../img/portfolio/Magento-hamptongems.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/Magento-hamptongems.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/Magento-hamptongems.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -707,7 +818,7 @@
                             		<div class="portfolio-item-content">
                             			<h3 class="portfolio-item-title"><a href="#">Magento customizations</a></h3>
                                 		<p>Theme customizations, payment gateway integrations and dozens of other customizations in magento based website.</p>
-										<p><strong> (Magento, website design)</strong></p>
+										<p><strong> (Magento, Php, website design)</strong></p>
                             		</div>	
 
 								</div>
@@ -720,10 +831,14 @@
 								<div class="element-inner animation fadeInLeft">
 
                                 	<div class="overlay-wrapper">
-										<img src="../img/portfolio/responsive-website-design-and-development.png" width="1200" height="900" alt="Portfolio 1">                                  
+										                  <img src="../img/portfolio/responsive-website-design-and-development.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/responsive-website-design-and-development.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/responsive-website-design-and-development.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -738,6 +853,97 @@
 							</div>
 							<!-- /Portfolio Element -->
 
+							<!-- Portfolio Element -->
+							<div class="element isotope-item branding" data-content="./portfolio/portfolio2.html">
+								<div class="element-inner animation fadeInLeft">
+
+									<div class="overlay-wrapper">
+										<img src="../img/portfolio/itboost-Screenshot_2022-08-27_00-57-23.png" width="1200" height="900" alt="Portfolio 1">                                  
+										<div class="overlay-wrapper-content">
+											<div class="overlay-details">
+												<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                          onclick="toggleSlider('block', [
+                          '../img/portfolio/itboost-Screenshot_2022-08-27_00-57-23.png',
+                          '../img/portfolio/itboost-homepage-image1.webp',
+                          ])"
+                        ></span></a>   	
+											</div>
+											<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
+										</div>
+									</div>										
+									<div class="portfolio-item-content">
+										<h3 class="portfolio-item-title"><a href="#">Architect, Review feedback systems</a></h3>
+										<p>App's basic features are to fetch, get, store and manage surveys and feedbacks from users type of client & customer.
+										APp is customizable and ready to add-on more features as required.</p>
+										<p><strong> (web design, web development)</strong></p>
+									</div>	
+
+								</div>
+							</div>
+							<!-- /Portfolio Element -->
+
+							<!-- Portfolio Element -->
+							<div class="element isotope-item branding" data-content="./portfolio/portfolio2.html">
+								<div class="element-inner animation fadeInLeft">
+
+									<div class="overlay-wrapper">
+										<img src="../img/portfolio/itboost-Screenshot_2022-08-27_00-56-58.png" style="max-height: 250px;" width="1200" height="900" alt="Portfolio 1">                                  
+										<div class="overlay-wrapper-content">
+											<div class="overlay-details">
+												<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                          onclick="toggleSlider('block', [
+                          '../img/portfolio/itboost-Screenshot_2022-08-27_00-56-58.png',
+                          '../img/portfolio/itboost-Screenshot_2022-08-27_00-57-54.png',
+                          '../img/portfolio/itboost-Screenshot_2022-08-27_00-56-09.png',
+                          '../img/portfolio/itboost-Screenshot_2022-08-27_00-55-37.png',
+                          '../img/portfolio/itboost-Screenshot_2022-08-27_00-55-05.png',
+                          '../img/portfolio/itboost-homepage-image2.webp',
+                          ])"
+                        ></span></a>   	
+											</div>
+											<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
+										</div>
+									</div>										
+									<div class="portfolio-item-content">
+										<h3 class="portfolio-item-title"><a href="#">IT Boost assets (<i>machines</i>) and domain manager</a></h3>
+										<p>Specific features will store and manage consumers assets(<i>for hardware</i>) and manages relevant domains.</p>
+										<p><strong> (web design, web development)</strong></p>
+									</div>	
+
+								</div>
+							</div>
+							<!-- /Portfolio Element -->
+
+							
+							<!-- Portfolio Element -->
+							<div class="element isotope-item branding" data-content="./portfolio/portfolio2.html">
+								<div class="element-inner animation fadeInLeft">
+
+									<div class="overlay-wrapper">
+										<img src="../img/portfolio/itboost-Screenshot_2022-08-27_00-59-44.png" width="1200" height="500" alt="Portfolio 1">                                  
+										<div class="overlay-wrapper-content">
+											<div class="overlay-details">
+												<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                          onclick="toggleSlider('block', [
+                            '../img/portfolio/itboost-Screenshot_2022-08-27_00-59-44.png',
+                            '../img/portfolio/itboost-Screenshot_2022-08-27_00-58-49.png',
+                          ])"
+                        ></span></a>   	
+											</div>
+											<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
+										</div>
+									</div>										
+									<div class="portfolio-item-content">
+										<h3 class="portfolio-item-title"><a href="#">IT Boost Architect Document Management System</a></h3>
+										<p>App is full of features like documents history revisions, provides change history comparison mode and
+											Interface is highly customizable. Consumers are secure with role and privileges system.</p>
+										<p><strong> (web design, web development)</strong></p>
+									</div>	
+
+								</div>
+							</div>
+							<!-- /Portfolio Element -->
+
 							
 							<!-- Portfolio Element -->
                             <div class="element isotope-item branding" data-content="./portfolio/portfolio2.html">
@@ -747,7 +953,11 @@
 										<img src="../img/portfolio/work-in-progress.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/work-in-progress.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/work-in-progress.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -770,7 +980,11 @@
 										<img src="../img/portfolio/work-in-progress.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/work-in-progress.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/work-in-progress.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -795,7 +1009,11 @@
 										<img src="../img/portfolio/work-in-progress.png" width="1200" height="900" alt="Portfolio 1">                                  
                                     	<div class="overlay-wrapper-content">
                                         	<div class="overlay-details">
-                                        		<a class="color-white" href="../img/portfolio/work-in-progress.png" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a>   	
+                                        		<a class="color-white" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"
+                                              onclick="toggleSlider('block', [
+                                                '../img/portfolio/work-in-progress.png',
+                                              ])"
+                                            ></span></a>   	
                                     		</div>
                                         	<div class="overlay-bg bg-overlay bg-overlay-gdark"></div>
                                     	</div>
@@ -889,7 +1107,8 @@
 	</div>	
 
 	<!-- Back To Top -->
-	<a href="#page-top" class="scrollup smooth-scroll" ><span class="fa fa-angle-up"></span></a>
+	<a href="#page-top" class="scrollup smooth-scroll" ><span class="fa fa-angle-up"
+  ></span></a>
 	<!-- /Back To Top -->
 
  
@@ -898,6 +1117,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../js/jquery-1.11.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Pop-up Images Slider Scripts -->
+	<script src="../js/image-sliderjs/image-slider.min.js"></script>
 
 	<script type="text/javascript" src="../js/themejs/jquery.countdown.js"></script>
 
@@ -935,7 +1157,7 @@
 	<script src="../js/themejs/jquery.countTo.js" type="text/javascript"></script>
 
 	<!-- Lightbox -->
-	<script src="../js/themejs/jquery.magnific-popup.min.js" type="text/javascript"></script>
+<!--	<script src="../js/themejs/jquery.magnific-popup.min.js" type="text/javascript"></script>-->
 
 	<!-- Tooltips -->
 	<script src="../js/themejs/jQuery.Opie.Tooltip.min.js" type="text/javascript"></script>

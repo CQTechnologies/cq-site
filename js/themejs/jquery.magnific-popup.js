@@ -270,7 +270,8 @@ MagnificPopup.prototype = {
 		} else {
 			mfp.wrap.css({ 
 				top: _window.scrollTop(),
-				position: 'absolute'
+				position: 'absolute',
+				zIndex: 1001,
 			});
 		}
 		if( mfp.st.fixedBgPos === false || (mfp.st.fixedBgPos === 'auto' && !mfp.fixedContentPos) ) {
