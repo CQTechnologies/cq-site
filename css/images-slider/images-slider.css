@@ -38,7 +38,15 @@
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
+.slide-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  color: rgb(41, 34, 34);
+  margin-top: -30px;
+  text-align: center;
+  font-style: italic;
+}
 .slider-close-button {
   right: 0;
   top: 22px;
