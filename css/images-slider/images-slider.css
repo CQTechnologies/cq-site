@@ -27,11 +27,12 @@
 .slider-prev,
 .slider-next,
 .slider-close-button {
+  background-color: #96929247;
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
+  padding: 5px 10px;
   margin-top: -22px;
   color: white;
   font-weight: bold;
@@ -52,7 +53,7 @@
 .slider-close-button {
   right: 0;
   top: 22px;
-  border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 10px;
 }
 
 /* Position the "slider-next button" to the right */
@@ -71,8 +72,10 @@
 /* Number text (1/3 etc) */
 .slider-number-text {
   color: #f2f2f2;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 22px;
   padding: 8px 12px;
+  text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
   position: absolute;
   top: 0;
 }
