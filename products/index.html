@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Products</title>
+  </head>
+  <body>
+    <style>
+      body {
+        overflow-x: hidden;
+      }
+      .container {
+        margin: 10px 5px;
+        padding: 10px;
+      }
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo-img img {
+        height: 60px;
+      }
+      .contact-info a{
+        text-decoration: none;
+        color: gray;
+        font-weight: bold;
+      }
+      .contact-info span{
+        font-size: 0.85rem;
+      }
+      .top-content {
+        text-align: center;
+      }
+      .grid-container {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 32.5% 32.5% 32.5%;
+        padding: 15px;
+      }
+
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid #aaafba6f;
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        border-radius: 5px;
+      }
+      .grid-item.image-container {
+        cursor: pointer;
+      }
+      .grid-item:hover {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      .grid-item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      #image-preview {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1;
+        text-align: center;
+        padding-top: 20px;
+        align-items: center;
+      }
+
+      #preview-image {
+        max-width: 90%;
+        max-height: 90%;
+        margin: 0 auto;
+      }
+
+      #close-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 3rem;
+        color: white;
+        cursor: pointer;
+      }
+      .project-info h1 {
+        font-size: 2rem;
+      }
+      .project-info p,
+      .project-info ul {
+        text-align: left;
+        font-size: 1.25rem;
+      }
+      .project-info ul {
+        list-style: circle;
+      }
+    </style>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-img">
+          <img src="product-images/CQ_Logo.jpg" alt="logo" />
+        </div>
+        <div class="contact-info">
+          <div>
+            <a href="mailto:support@cqtechnologies.com"
+              >support@cqtechnologies.com</a
+            >
+          </div>
+          <span
+            >CQ Technologies ltd, Kemp House <br />
+            152-160 City Road, London, <br />
+            England,EC1V 2NX</span
+          >
+        </div>
+      </div>
+      <div class="top-content">
+        <h1>Our Products</h1>
+        <h2>UNDER CONSTRUCTION</h2>
+        <p>Actively developed.</p>
+      </div>
+      <div class="project-grid">
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="project-info">
+              <h1>Talent App</h1>
+              <p>AI powered job placement, skills assessmen</p>
+              <ul>
+                <li>Custom AI and analytics powered</li>
+                <li>Built-in peer ratings</li>
+                <li>Company reviews</li>
+                <li>Candidate reviews</li>
+                <li>More to come..</li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid-item image-container">
+            <img src="product-images/person-search.png" alt="product-img" />
+          </div>
+          <div class="grid-item image-container">
+            <img src="product-images/org-search.png" alt="product-img" />
+          </div>
+          <div class="grid-item image-container">
+            <img
+              src="product-images/org-search-filters.png"
+              alt="product-img"
+            />
+          </div>
+          <div class="grid-item image-container">
+            <img
+              src="product-images/saves-search-feature.png"
+              alt="product-img"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="project-grid">
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="project-info">
+              <h1>Candidate Code Test App</h1>
+              <p>Features include:</p>
+              <ul>
+                <li>
+                  Sending test invites to candidates via Whatsapp and Email
+                </li>
+                <li>Live Coding Assessment</li>
+                <li>Separate logins and account for each candidate</li>
+                <li>Admin panel to view all tests results</li>
+                <li>Anti-cheating and hacking mechanisms</li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid-item image-container">
+            <img src="product-images/code-test-1.png" alt="product-img" />
+          </div>
+          <div class="grid-item image-container">
+            <img src="product-images/code-test-2.png" alt="product-img" />
+          </div>
+          <div class="grid-item image-container">
+            <img src="product-images/code-test-3.png" alt="product-img" />
+          </div>
+          <div class="grid-item image-container">
+            <img src="product-images/code-test-4.png" alt="product-img" />
+          </div>
+          <div class="grid-item image-container">
+            <img src="product-images/code-test-5.png" alt="product-img" />
+          </div>
+        </div>
+      </div>
+      <div id="image-preview">
+        <span id="close-button">&times;</span>
+        <img id="preview-image" src="" alt="Preview" />
+      </div>
+    </div>
+    <script>
+      const imageContainers = document.querySelectorAll(".image-container");
+      const imagePreview = document.getElementById("image-preview");
+      const previewImage = document.getElementById("preview-image");
+      const closeButton = document.getElementById("close-button");
+
+      imageContainers.forEach((container) => {
+        container.addEventListener("click", () => {
+          const img = container.querySelector("img");
+          previewImage.src = img.src;
+          imagePreview.style.display = "flex";
+        });
+      });
+
+      closeButton.addEventListener("click", () => {
+        imagePreview.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
